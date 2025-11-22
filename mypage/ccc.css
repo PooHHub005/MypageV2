@@ -1,0 +1,110 @@
+/* ================================
+   พื้นหลัง + ฟอนต์หลักของหน้าเว็บ
+================================ */
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff4e3;           /* ครีมอ่อน */
+  font-family: Georgia, serif;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+.navbar {
+  width: 100%;
+  background: #faf9f5;
+  padding: 18px 0;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 18px;
+}
+
+.navbar a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ================================
+   LAYOUT หลักแบบข้อความซ้าย
+================================ */
+.container {
+  max-width: 1300px;
+  margin: 70px auto;
+  padding: 0 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* 🟢 จัดกลางแนวดิ่ง */
+  position: relative;
+  min-height: 400px;      /* กันไม่ให้ layout เตี้ยเกิน */
+}
+
+
+/* กล่องข้อความฝั่งซ้าย */
+.left-box {
+  width: 60%;             /* กันพื้นที่ซ้าย 60% */
+}
+
+/* หัวเรื่อง */
+.left-box h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Sub-text */
+.left-box h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 5px 0 10px 0;
+}
+
+/* ================================
+   ไอคอน 3 อันใต้ข้อความ
+================================ */
+.small-images {
+  margin-top: 25px;
+  display: flex;
+  gap: 25px;
+}
+
+.small-images img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 12px;
+  object-fit: contain;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.small-images img:hover {
+  transform: scale(1.07);
+}
+
+/* ================================
+   รูปโปรไฟล์ขวาสุดแบบรูปตัวอย่าง
+================================ */
+.profile-circle {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  right: 80px;       /* ระยะจากขอบขวาของเว็บ (ปรับได้) */
+  top: 100px;        /* ระยะจากด้านบน container (ปรับได้) */
+  box-shadow: 0 0 25px rgba(0,0,0,0.12);
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* กันรูปยืด */
+  object-position: center;
+}
